@@ -171,3 +171,10 @@ crm = {
 #   Jane Otto
 #
 # ------- your code under here -----------
+
+crm[:people].each do |person|
+  puts " #{person[:first_name]} #{person[:last_name]}"
+  person[:employments].each do |employment|
+    puts "   #{employment[:title]} at #{crm[:companies][employment[:company_id]]}"
+  end
+end

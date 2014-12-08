@@ -156,3 +156,7 @@ crm = {
 #   Jane - 0
 #
 # ------- your code under here -----------
+
+crm[:people].each do |people|
+  puts " #{people[:first_name]} - #{people[:employments].length}"
+end
